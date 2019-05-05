@@ -44,7 +44,7 @@ The output of the program will have the following form:
 			{
              			“id”: 45,
 				“artist”: “Michael Jackson”,
-“title”: “Billie Jean”,
+				“title”: “Billie Jean”,
 				“kid_safe”: 0.2,
 				“love”: 0.5,
 				“mood”: 0.3,
@@ -52,7 +52,7 @@ The output of the program will have the following form:
 				“complexity”: 0.3,
 },
 			{
-“title”: “Wheels on the bus”,
+				“title”: “Wheels on the bus”,
                                  		....
 }
 		]
