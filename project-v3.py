@@ -70,10 +70,10 @@ def mood_test(i):
     return mood
 
 
-Path = "/Users/iamsu/Desktop/project/Lyrics.unzipped/"
-filelist = os.listdir(Path)
+# Path = "/Users/iamsu/Desktop/project/Lyrics.unzipped/"
+# filelist = os.listdir(Path)
 
-mood_score=[mood_test(i) for i in filelist]
+# mood_score=[mood_test(i) for i in filelist]
 
 
 # Kid_Safe
@@ -95,8 +95,8 @@ profanity_lib=list(soup.get_text().split('\n'))[35:-1]
 # In[25]:
 
 
-Path = "/Users/iamsu/Desktop/project/Lyrics.unzipped/"
-filelist = os.listdir(Path)
+# Path = "/Users/iamsu/Desktop/project/Lyrics.unzipped/"
+# filelist = os.listdir(Path)
 
 def kid_safe(i):
     profanity_count = 0
@@ -112,7 +112,7 @@ def kid_safe(i):
             if (kid_safe_score < 0):
                 kid_safe_score = 0
     return kid_safe_score
-kid_safe_scores=[kid_safe(i) for i in filelist]
+# kid_safe_scores=[kid_safe(i) for i in filelist]
 
 
 # Length
@@ -150,7 +150,7 @@ def length_test(i):
                 length_score=0    
     return length_score
 
-length_scores=[length_test(i) for i in filelist]
+# length_scores=[length_test(i) for i in filelist]
 
 
 # Complexity
@@ -172,7 +172,7 @@ def complexity(i):
                 complex_score=0
     return complex_score
 
-complexity_scores=[complexity(i) for i in filelist]
+# complexity_scores=[complexity(i) for i in filelist]
 
 
 # LOVE
@@ -208,7 +208,7 @@ def love_test(i):
                 love_song_score =1
     return love_song_score
 
-love_scores=[love_test(i) for i in filelist]
+# love_scores=[love_test(i) for i in filelist]
 
 
 # Return a dictionary
@@ -218,28 +218,28 @@ love_scores=[love_test(i) for i in filelist]
 
 import re
 
-Path = "/Users/iamsu/Desktop/project/Lyrics.unzipped/"
-filelist = os.listdir(Path)
+# Path = "/Users/iamsu/Desktop/project/Lyrics.unzipped/"
+# filelist = os.listdir(Path)
 
 
-def value(i):
-    content = i.replace('.txt', '').split('~')
-    id_info = content[0]
-    artist_info = content[1]
-    title_info = content[2]
-    value = {'ID': id_info ,
-             'artist': artist_info, 
-             'title': title_info,
-             'kid_safe': kid_safe(i), 
-             'love': love_test(i), 
-             'mood': mood_test(i), 
-             'length': length_test(i), 
-             'complexity': complexity(i)}
-    return value
+# def value(i):
+#     content = i.replace('.txt', '').split('~')
+#     id_info = content[0]
+#     artist_info = content[1]
+#     title_info = content[2]
+#     value = {'ID': id_info ,
+#              'artist': artist_info, 
+#              'title': title_info}
+#              'kid_safe': kid_safe(i), 
+#              'love': love_test(i), 
+#              'mood': mood_test(i), 
+#              'length': length_test(i), 
+#              'complexity': complexity(i)}
+#     return value
 
 
-all_value = [value(i) for i in filelist]    
-output={'characterizations':all_value}
+# all_value = [value(i) for i in filelist]    
+# output={'characterizations':all_value}
 # for keys,value in output.items():
 #     print(keys)
 #     for v in output[keys]:
@@ -254,30 +254,49 @@ output={'characterizations':all_value}
 # In[91]:
 
 
-import unittest
-class TestRange(unittest.TestCase):
-    def test_mood(self): 
-        for i in filelist:
-            if i.endswith(".txt"):
-                self.assertTrue(mood_test(i) <=1 and mood_test(i)>=0)
-    def test_kid(self):
-        for i in filelist:
-            if i.endswith(".txt"):
-                self.assertTrue(kid_safe(i) <=1 and kid_safe(i)>=0)
-    def test_length(self):
-        for i in filelist:
-            if i.endswith(".txt"):
-                self.assertTrue(length_test(i) <=1 and length_test(i)>=0)
-    def test_complexity(self):
-        for i in filelist:
-            if i.endswith(".txt"):
-                self.assertTrue(complexity(i) <=1 and complexity(i)>=0)
-    def test_love(self):
-        for i in filelist:
-            if i.endswith(".txt"):
-                self.assertTrue(love_test(i) <=1 and love_test(i)>=0)               
+# import unittest
+# class TestRange(unittest.TestCase):
+#     def test_mood(self): 
+#         for i in filelist:
+#             if i.endswith(".txt"):
+#                 self.assertTrue(mood_test(i) <=1 and mood_test(i)>=0)
+#     def test_kid(self):
+#         for i in filelist:
+#             if i.endswith(".txt"):
+#                 self.assertTrue(kid_safe(i) <=1 and kid_safe(i)>=0)
+#     def test_length(self):
+#         for i in filelist:
+#             if i.endswith(".txt"):
+#                 self.assertTrue(length_test(i) <=1 and length_test(i)>=0)
+#     def test_complexity(self):
+#         for i in filelist:
+#             if i.endswith(".txt"):
+#                 self.assertTrue(complexity(i) <=1 and complexity(i)>=0)
+#     def test_love(self):
+#         for i in filelist:
+#             if i.endswith(".txt"):
+#                 self.assertTrue(love_test(i) <=1 and love_test(i)>=0)               
 
-suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestRange)
-# Run each test in suite
-unittest.TextTestRunner().run(suite)
+# suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestRange)
+# # Run each test in suite
+# unittest.TextTestRunner().run(suite)
+
+if __name__ == "__main__":
+    Path = "/Users/iamsu/Desktop/project/Lyrics.unzipped/"
+    filelist = os.listdir(Path)
+    content = i.replace('.txt', '').split('~')
+    id_info = content[0]
+    artist_info = content[1]
+    title_info = content[2]
+    value = {'ID': id_info ,
+             'artist': artist_info, 
+             'title': title_info}
+             'kid_safe': kid_safe(i), 
+             'love': love_test(i), 
+             'mood': mood_test(i), 
+             'length': length_test(i), 
+             'complexity': complexity(i)}
+    print({'charaterization':value})
+
+        
 
