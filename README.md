@@ -1,4 +1,4 @@
-## Tools for Analytics-A Tool to Grading Songs
+## Tools for Analytics-A Tool to Grade Songs
 
 Silan Xu       sx2237
 
