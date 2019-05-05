@@ -29,6 +29,7 @@ def main():
          'complexity': func.complexity(path)}
         output=json.dump(value)
     final_result=[].append(output)
+    finalresult={'characterizations':final_result}
     json.dump(finalresult, sys.stdout, indent=4)
 
 if __name__ == "__main__":
