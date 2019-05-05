@@ -33,7 +33,7 @@ Here are the main dimensions this tool can test and their grading methodology:
   - 1 means it is a very long song
   
 * Complexity
-  - It tests whether this song requires higher level of vocabulary to understand. It counts how many times the word with the highest frequences appears and compare it with the number of unique words a song contains. The score will be deducted by 0.01 if this ratio goes up by 1%.
+  - It tests whether this song requires higher level of vocabulary to understand. It counts how many times the word with the highest frequency appears and compare it with the number of unique words a song contains. The score will be deducted by 0.01 if this ratio goes up by 1%.
   - 0 means it is a very simple song
   - 1 means it is a very complex song
 
