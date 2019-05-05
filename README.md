@@ -37,7 +37,8 @@ Here are the main dimensions this tool can test and their grading methodology:
   - 0 means it is a very simple song
   - 1 means it is a very complex song
 
-## Output
+## Expected Output
+
 The output of the program will have the following form:
 {
 		“characterizations”: [
@@ -57,3 +58,4 @@ The output of the program will have the following form:
 }
 		]
 	}
+
