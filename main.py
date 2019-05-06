@@ -42,9 +42,3 @@ if __name__ == "__main__":
     
     main(args.path)
 
-
-# In[22]:
-
-
-main(mypath='/Users/iamsu/Desktop/project/Lyrics.unzipped/')
-
